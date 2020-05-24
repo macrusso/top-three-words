@@ -14,7 +14,7 @@ const topWords = (text) => {
 
 
   // returns empty array when no words
-  if(arrayOfWords.length = 0){
+  if(arrayOfWords.length === 0){
     return []
   }
 
