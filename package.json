@@ -1,0 +1,15 @@
+{
+  "name": "Top3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node src/index.js"
+  },
+  "author": "Mac Rusek",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}
