@@ -10,6 +10,8 @@ const string3 = " //wont won't won't"
 
 const string4 = "& test? test-other -' ' ' ' - - - -' test test!"
 
+const string5 = "&  -' ' ' ' - - - -' %%%% ^ &&"
+
 
 test('Text with line brakes', () => {
   expect(topWords(string)).toEqual(["a", "of", "on"]);
@@ -25,4 +27,8 @@ test('Text with extra spaces and non-alphanumeric chars', () => {
 
 test('Text with hyphens and apostrophes', () => {
   expect(topWords(string4)).toEqual([ 'test', 'test-other' ]);
+});
+
+test('Text without words', () => {
+  expect(topWords(string5)).toEqual([]);
 });
