@@ -18,7 +18,7 @@ const topWords = (text) => {
     return []
   }
 
-  let wordsFrequencyMap = {};
+  const wordsFrequencyMap = {};
 
   /*
   For loop is way faster than Array.forEach, Array.map or Array.reduce.
@@ -36,13 +36,15 @@ const topWords = (text) => {
     const word = arrayOfWords[i].toLowerCase().replace(/([-'](?!\w))|([^\w'-])/gi, '')
 
       // Pass for empty string
-      if (word){
-        if (!wordsFrequencyMap[word]) {
-          wordsFrequencyMap[word] = 0;
-        }
-
-        wordsFrequencyMap[word] += 1;
+      if (!word){
+        continue
       }
+
+      if (!wordsFrequencyMap[word]) {
+        wordsFrequencyMap[word] = 0;
+      }
+
+      wordsFrequencyMap[word] += 1;
   }
 
   // JS sort has complexity of Ω(n log(n)), it should be more then enough for it.
