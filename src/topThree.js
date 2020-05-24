@@ -12,6 +12,12 @@ const topWords = (text) => {
   */
   const arrayOfWords = text.trim().split(/\r\n|\r|\n|\s/)
 
+
+  // returns empty array when no words
+  if(arrayOfWords.length = 0){
+    return []
+  }
+
   let wordsFrequencyMap = {};
 
   /*
